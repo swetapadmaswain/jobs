@@ -12,11 +12,11 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "test" {
-    bucket = "mytestbucker_uebbdhdhdhddhdh-87979"
+    bucket = "my-tf-test-bucket-uebbdhdhdhddhdh-87979"
 
     tags = {
-        Name = "My_buckey"
-        Environment = "Dev"
+      Name        = "My bucket"
+      Environment = "Dev"
     }
   
 }
