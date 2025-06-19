@@ -104,7 +104,7 @@ resource "aws_security_group" "web_server_sg" {
 
 # 8. Create a Compute Engine instance (EC2 instance in AWS) in the public subnet
 resource "aws_instance" "web_server" {
-  ami           = "ami-053b0dcd1d9a243e8" # Example: Ubuntu Server 22.04 LTS (HVM), SSD Volume Type. Find a suitable AMI for your region.
+  ami           = "ami-03ab4f7c25eca90dc" # Example: Ubuntu Server 22.04 LTS (HVM), SSD Volume Type. Find a suitable AMI for your region.
   instance_type = "t2.micro"             # Free tier eligible
   subnet_id     = aws_subnet.public_subnet.id
   associate_public_ip_address = true # Ensure it gets a public IP
