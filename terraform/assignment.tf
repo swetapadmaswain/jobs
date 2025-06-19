@@ -118,7 +118,7 @@ resource "aws_instance" "web_server" {
   instance_type = "t2.micro"             # Free tier eligible
   subnet_id     = aws_subnet.public_subnet.id
   associate_public_ip_address = true # Ensure it gets a public IP
-  security_groups = [aws_security_group.web_server_sg.name]
+  vpc_security_group_ids = [aws_security_group.web_server_sg.id]
   key_name = "terraform" # Replace with an existing EC2 key pair name for SSH access
 
   user_data = <<-EOF
